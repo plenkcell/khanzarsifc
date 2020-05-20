@@ -681,10 +681,10 @@ public class DlgPiutang extends javax.swing.JDialog {
         LTotal.setPreferredSize(new java.awt.Dimension(155, 26));
         panelisi5.add(LTotal);
 
-        label14.setText("Ongkir :");
+        label14.setText("Tuslah/Embalase :");
         label14.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         label14.setName("label14"); // NOI18N
-        label14.setPreferredSize(new java.awt.Dimension(60, 26));
+        label14.setPreferredSize(new java.awt.Dimension(120, 26));
         panelisi5.add(label14);
 
         Ongkir.setText("0");

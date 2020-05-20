@@ -1167,12 +1167,14 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     } else if (Kd2.getText().trim().equals("")) {
         JOptionPane.showMessageDialog(null, "Maaf, Gagal menghapus. Pilih dulu data yang mau dihapus.\nKlik No.Rawat pada table untuk memilih...!!!!");
     } else if (!(Kd2.getText().trim().equals(""))) {
+        int input = JOptionPane.showConfirmDialog(null, "Apakah anda yakin mau menghapus data Ini??", "Hapus Dialog", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
+                    if (input == 0) {       
         if (Sequel.cariRegistrasi(tbDokter.getValueAt(tbDokter.getSelectedRow(), 0).toString()) > 0) {
             JOptionPane.showMessageDialog(rootPane, "Data billing sudah terverifikasi, data tidak boleh dihapus.\nSilahkan hubungi bagian kasir/keuangan ..!!");
             TCari.requestFocus();
         } else {
             try {
-
+              
                 status = "";
                 ttljmdokter = 0;
                 ttljmpetugas = 0;
@@ -1239,14 +1241,15 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                         jur.simpanJurnal(tbDokter.getValueAt(tbDokter.getSelectedRow(), 0).toString(), Sequel.cariIsi("select current_date()"), "U", "PEMBATALAN PEMERIKSAAN RADIOLOGI RAWAT INAP PASIEN OLEH " + akses.getkode());
                     }
                 }
-
+            
                 tampil();
-
+            
             } catch (Exception e) {
                 System.out.println("Notifikasi : " + e);
                 JOptionPane.showMessageDialog(null, "Maaf, Silahkan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
             }
         }
+    }
     }
 }//GEN-LAST:event_BtnHapusActionPerformed
 

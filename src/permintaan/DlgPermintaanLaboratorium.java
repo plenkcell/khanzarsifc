@@ -432,6 +432,11 @@ public final class DlgPermintaanLaboratorium extends javax.swing.JDialog {
         TNoRM.setEditable(false);
         TNoRM.setHighlighter(null);
         TNoRM.setName("TNoRM"); // NOI18N
+        TNoRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TNoRMActionPerformed(evt);
+            }
+        });
         PanelInput.add(TNoRM);
         TNoRM.setBounds(225, 12, 105, 23);
 
@@ -1074,6 +1079,10 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     private void DiagnosisKlinisKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DiagnosisKlinisKeyPressed
         Valid.pindah(evt,TCari,InformasiTambahan);
     }//GEN-LAST:event_DiagnosisKlinisKeyPressed
+
+    private void TNoRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TNoRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TNoRMActionPerformed
 
     /**
     * @param args the command line arguments

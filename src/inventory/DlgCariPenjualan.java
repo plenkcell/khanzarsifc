@@ -363,6 +363,7 @@ public class DlgCariPenjualan extends javax.swing.JDialog {
         ppResepObat = new javax.swing.JMenuItem();
         ppResepObat1 = new javax.swing.JMenuItem();
         ppResepObat2 = new javax.swing.JMenuItem();
+        ppCetakNota1 = new javax.swing.JMenuItem();
         internalFrame1 = new widget.InternalFrame();
         jPanel1 = new javax.swing.JPanel();
         panelisi4 = new widget.panelisi();
@@ -501,6 +502,22 @@ public class DlgCariPenjualan extends javax.swing.JDialog {
             }
         });
         jPopupMenu1.add(ppResepObat2);
+
+        ppCetakNota1.setBackground(new java.awt.Color(255, 153, 153));
+        ppCetakNota1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        ppCetakNota1.setForeground(new java.awt.Color(50, 50, 50));
+        ppCetakNota1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
+        ppCetakNota1.setText("Cetak Nota Luar");
+        ppCetakNota1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ppCetakNota1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        ppCetakNota1.setName("ppCetakNota1"); // NOI18N
+        ppCetakNota1.setPreferredSize(new java.awt.Dimension(150, 25));
+        ppCetakNota1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppCetakNota1ActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(ppCetakNota1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -831,7 +848,6 @@ public class DlgCariPenjualan extends javax.swing.JDialog {
         TabRawat.setBackground(new java.awt.Color(255, 255, 253));
         TabRawat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)));
         TabRawat.setForeground(new java.awt.Color(50, 50, 50));
-        TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         TabRawat.setName("TabRawat"); // NOI18N
         TabRawat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1522,6 +1538,26 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
         }
     }//GEN-LAST:event_ppResepObat2ActionPerformed
 
+    private void ppCetakNota1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppCetakNota1ActionPerformed
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        if(tabMode.getRowCount()==0){
+            JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
+            TCari.requestFocus();
+        }else if(tbDokter.getSelectedRow()<= -1){
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
+        }else{
+            if(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim().equals("")){
+                Valid.textKosong(TCari,"No.Nota");
+            }else if(tabMode.getRowCount()==0){
+                JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
+                kdbar.requestFocus();
+            }else {
+                Valid.panggilUrl("billing/NotaApotekLuar.php?nonota="+tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString().trim());
+            }
+        }
+        this.setCursor(Cursor.getDefaultCursor());
+    }//GEN-LAST:event_ppCetakNota1ActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -1579,6 +1615,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
     private widget.panelisi panelisi3;
     private widget.panelisi panelisi4;
     private javax.swing.JMenuItem ppCetakNota;
+    private javax.swing.JMenuItem ppCetakNota1;
     private javax.swing.JMenuItem ppHapus;
     private javax.swing.JMenuItem ppResepObat;
     private javax.swing.JMenuItem ppResepObat1;

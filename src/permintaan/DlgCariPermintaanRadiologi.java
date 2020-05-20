@@ -1404,8 +1404,11 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     if (Sequel.cariInteger("select count(noorder) from permintaan_pemeriksaan_radiologi where stts_bayar='Sudah' and noorder=?", tbRadiologiRanap.getValueAt(tbRadiologiRanap.getSelectedRow(), 0).toString()) > 0) {
                         JOptionPane.showMessageDialog(null, "Maaf, Tidak boleh dihapus karena sudah ada tindakan yang sudah dibayar.\nSilahkan hubungi kasir...!!!!");
                     } else {
+                        int input = JOptionPane.showConfirmDialog(null, "Apakah anda yakin mau menghapus data ini??", "Hapus Dialog", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
+                        if (input == 0) {
                         Sequel.meghapus("permintaan_radiologi", "noorder", tbRadiologiRanap.getValueAt(tbRadiologiRanap.getSelectedRow(), 0).toString());
                         tampil3();
+                        }
                     }
                 }
             } else {

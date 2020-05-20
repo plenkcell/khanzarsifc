@@ -803,7 +803,7 @@ public final class DlgCariObat extends javax.swing.JDialog {
         jLabel8.setBounds(4, 40, 65, 23);
 
         DTPTgl.setForeground(new java.awt.Color(50, 70, 50));
-        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "12-12-2019" }));
+        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "15-05-2020" }));
         DTPTgl.setDisplayFormat("dd-MM-yyyy");
         DTPTgl.setName("DTPTgl"); // NOI18N
         DTPTgl.setOpaque(false);
@@ -927,12 +927,22 @@ public final class DlgCariObat extends javax.swing.JDialog {
         LblNoRM.setEditable(false);
         LblNoRM.setName("LblNoRM"); // NOI18N
         LblNoRM.setPreferredSize(new java.awt.Dimension(207, 23));
+        LblNoRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LblNoRMActionPerformed(evt);
+            }
+        });
         FormInput.add(LblNoRM);
         LblNoRM.setBounds(256, 10, 90, 23);
 
         LblNoRawat.setEditable(false);
         LblNoRawat.setName("LblNoRawat"); // NOI18N
         LblNoRawat.setPreferredSize(new java.awt.Dimension(207, 23));
+        LblNoRawat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LblNoRawatActionPerformed(evt);
+            }
+        });
         FormInput.add(LblNoRawat);
         LblNoRawat.setBounds(72, 10, 123, 23);
 
@@ -941,7 +951,6 @@ public final class DlgCariObat extends javax.swing.JDialog {
         TabRawat.setBackground(new java.awt.Color(255, 255, 253));
         TabRawat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)));
         TabRawat.setForeground(new java.awt.Color(50, 50, 50));
-        TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
         TabRawat.setName("TabRawat"); // NOI18N
         TabRawat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1911,6 +1920,14 @@ private void JeniskelasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
         ceksetok.setVisible(true);
         this.setCursor(Cursor.getDefaultCursor());  
     }//GEN-LAST:event_ppStok1ActionPerformed
+
+    private void LblNoRawatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LblNoRawatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LblNoRawatActionPerformed
+
+    private void LblNoRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LblNoRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LblNoRMActionPerformed
 
     /**
     * @param args the command line arguments

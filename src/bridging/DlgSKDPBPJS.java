@@ -275,7 +275,6 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         BtnSimpan = new widget.Button();
         BtnBatal = new widget.Button();
         BtnHapus = new widget.Button();
-        BtnEdit = new widget.Button();
         BtnPrint = new widget.Button();
         BtnAll = new widget.Button();
         BtnKeluar = new widget.Button();
@@ -336,7 +335,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
 
         MnSurat.setBackground(new java.awt.Color(255, 255, 254));
         MnSurat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        MnSurat.setForeground(new java.awt.Color(50,50,50));
+        MnSurat.setForeground(new java.awt.Color(50, 50, 50));
         MnSurat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         MnSurat.setText("Surat SKDP BPJS");
         MnSurat.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -359,7 +358,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ SKDP BPJS ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ SKDP BPJS ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -446,24 +445,6 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         panelGlass8.add(BtnHapus);
-
-        BtnEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/inventaris.png"))); // NOI18N
-        BtnEdit.setMnemonic('G');
-        BtnEdit.setText("Ganti");
-        BtnEdit.setToolTipText("Alt+G");
-        BtnEdit.setName("BtnEdit"); // NOI18N
-        BtnEdit.setPreferredSize(new java.awt.Dimension(100, 30));
-        BtnEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnEditActionPerformed(evt);
-            }
-        });
-        BtnEdit.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                BtnEditKeyPressed(evt);
-            }
-        });
-        panelGlass8.add(BtnEdit);
 
         BtnPrint.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/b_print.png"))); // NOI18N
         BtnPrint.setMnemonic('T');
@@ -593,7 +574,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         R2.setPreferredSize(new java.awt.Dimension(90, 23));
         panelCari.add(R2);
 
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "30-04-2019" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-05-2020" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -616,7 +597,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         jLabel22.setPreferredSize(new java.awt.Dimension(25, 23));
         panelCari.add(jLabel22);
 
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "30-04-2019" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-05-2020" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -638,7 +619,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         R3.setPreferredSize(new java.awt.Dimension(85, 23));
         panelCari.add(R3);
 
-        DTPCari3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "30-04-2019" }));
+        DTPCari3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-05-2020" }));
         DTPCari3.setDisplayFormat("dd-MM-yyyy");
         DTPCari3.setName("DTPCari3"); // NOI18N
         DTPCari3.setOpaque(false);
@@ -661,7 +642,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         jLabel25.setPreferredSize(new java.awt.Dimension(25, 23));
         panelCari.add(jLabel25);
 
-        DTPCari4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "30-04-2019" }));
+        DTPCari4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-05-2020" }));
         DTPCari4.setDisplayFormat("dd-MM-yyyy");
         DTPCari4.setName("DTPCari4"); // NOI18N
         DTPCari4.setOpaque(false);
@@ -725,27 +706,27 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(TNoRM);
-        TNoRM.setBounds(96, 10, 87, 23);
+        TNoRM.setBounds(100, 10, 87, 23);
 
         jLabel9.setText("Dokter :");
         jLabel9.setName("jLabel9"); // NOI18N
         FormInput.add(jLabel9);
-        jLabel9.setBounds(0, 130, 92, 23);
+        jLabel9.setBounds(40, 100, 50, 23);
 
         NmDokter.setEditable(false);
         NmDokter.setHighlighter(null);
         NmDokter.setName("NmDokter"); // NOI18N
         FormInput.add(NmDokter);
-        NmDokter.setBounds(185, 130, 160, 23);
+        NmDokter.setBounds(190, 100, 160, 23);
 
         TPasien.setEditable(false);
         TPasien.setHighlighter(null);
         TPasien.setName("TPasien"); // NOI18N
         FormInput.add(TPasien);
-        TPasien.setBounds(185, 10, 190, 23);
+        TPasien.setBounds(190, 10, 190, 23);
 
         TanggalSurat.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalSurat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "30-04-2019 07:58:03" }));
+        TanggalSurat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-05-2020 07:10:11" }));
         TanggalSurat.setDisplayFormat("dd-MM-yyyy hh:mm:ss");
         TanggalSurat.setName("TanggalSurat"); // NOI18N
         TanggalSurat.setOpaque(false);
@@ -765,7 +746,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(Status);
-        Status.setBounds(610, 160, 130, 23);
+        Status.setBounds(480, 160, 130, 23);
 
         jLabel10.setText("Tanggal Surat :");
         jLabel10.setName("jLabel10"); // NOI18N
@@ -776,7 +757,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
         KdDokter.setHighlighter(null);
         KdDokter.setName("KdDokter"); // NOI18N
         FormInput.add(KdDokter);
-        KdDokter.setBounds(96, 130, 87, 23);
+        KdDokter.setBounds(100, 100, 87, 23);
 
         BtnDokter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnDokter.setMnemonic('X');
@@ -793,29 +774,29 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnDokter);
-        BtnDokter.setBounds(347, 130, 28, 23);
+        BtnDokter.setBounds(350, 100, 28, 23);
 
         jLabel37.setText("Status :");
         jLabel37.setName("jLabel37"); // NOI18N
         FormInput.add(jLabel37);
-        jLabel37.setBounds(546, 160, 60, 23);
+        jLabel37.setBounds(410, 160, 60, 23);
 
         jLabel11.setText("Unit/Poli :");
         jLabel11.setName("jLabel11"); // NOI18N
         FormInput.add(jLabel11);
-        jLabel11.setBounds(375, 130, 95, 23);
+        jLabel11.setBounds(20, 70, 70, 23);
 
         KdPoli.setEditable(false);
         KdPoli.setHighlighter(null);
         KdPoli.setName("KdPoli"); // NOI18N
         FormInput.add(KdPoli);
-        KdPoli.setBounds(474, 130, 70, 23);
+        KdPoli.setBounds(100, 70, 70, 23);
 
         NmPoli.setEditable(false);
         NmPoli.setHighlighter(null);
         NmPoli.setName("NmPoli"); // NOI18N
         FormInput.add(NmPoli);
-        NmPoli.setBounds(546, 130, 165, 23);
+        NmPoli.setBounds(170, 70, 165, 23);
 
         BtnPoli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnPoli.setMnemonic('X');
@@ -832,13 +813,14 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnPoli);
-        BtnPoli.setBounds(712, 130, 28, 23);
+        BtnPoli.setBounds(340, 70, 28, 23);
 
         jLabel5.setText("Alasan 1 :");
         jLabel5.setName("jLabel5"); // NOI18N
         FormInput.add(jLabel5);
-        jLabel5.setBounds(0, 70, 92, 23);
+        jLabel5.setBounds(410, 40, 60, 23);
 
+        Alasan1.setText("-");
         Alasan1.setHighlighter(null);
         Alasan1.setName("Alasan1"); // NOI18N
         Alasan1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -847,8 +829,9 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(Alasan1);
-        Alasan1.setBounds(96, 70, 279, 23);
+        Alasan1.setBounds(480, 40, 279, 23);
 
+        Alasan2.setText("-");
         Alasan2.setHighlighter(null);
         Alasan2.setName("Alasan2"); // NOI18N
         Alasan2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -857,33 +840,40 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(Alasan2);
-        Alasan2.setBounds(474, 70, 266, 23);
+        Alasan2.setBounds(480, 100, 280, 23);
 
         jLabel8.setText("Alasan 2 :");
         jLabel8.setName("jLabel8"); // NOI18N
         FormInput.add(jLabel8);
-        jLabel8.setBounds(375, 70, 95, 23);
+        jLabel8.setBounds(410, 100, 60, 23);
 
         jLabel12.setText("Tindak Lanjut 1 :");
         jLabel12.setName("jLabel12"); // NOI18N
         FormInput.add(jLabel12);
-        jLabel12.setBounds(0, 100, 92, 23);
+        jLabel12.setBounds(380, 70, 92, 23);
 
+        Rtl1.setText("-");
         Rtl1.setHighlighter(null);
         Rtl1.setName("Rtl1"); // NOI18N
+        Rtl1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Rtl1ActionPerformed(evt);
+            }
+        });
         Rtl1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 Rtl1KeyPressed(evt);
             }
         });
         FormInput.add(Rtl1);
-        Rtl1.setBounds(96, 100, 279, 23);
+        Rtl1.setBounds(480, 70, 279, 23);
 
         jLabel13.setText("Tindak Lanjut 2 :");
         jLabel13.setName("jLabel13"); // NOI18N
         FormInput.add(jLabel13);
-        jLabel13.setBounds(375, 100, 95, 23);
+        jLabel13.setBounds(380, 130, 95, 23);
 
+        Rtl2.setText("-");
         Rtl2.setHighlighter(null);
         Rtl2.setName("Rtl2"); // NOI18N
         Rtl2.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -892,15 +882,15 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(Rtl2);
-        Rtl2.setBounds(474, 100, 266, 23);
+        Rtl2.setBounds(480, 130, 280, 23);
 
         jLabel14.setText("Periksa Kembali :");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
-        jLabel14.setBounds(0, 160, 92, 23);
+        jLabel14.setBounds(0, 40, 92, 23);
 
         TanggalPeriksa.setForeground(new java.awt.Color(50, 70, 50));
-        TanggalPeriksa.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "30-04-2019 07:58:03" }));
+        TanggalPeriksa.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "16-05-2020 07:10:11" }));
         TanggalPeriksa.setDisplayFormat("dd-MM-yyyy hh:mm:ss");
         TanggalPeriksa.setName("TanggalPeriksa"); // NOI18N
         TanggalPeriksa.setOpaque(false);
@@ -915,12 +905,12 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(TanggalPeriksa);
-        TanggalPeriksa.setBounds(96, 160, 132, 23);
+        TanggalPeriksa.setBounds(100, 40, 132, 23);
 
         jLabel15.setText("No.Surat :");
         jLabel15.setName("jLabel15"); // NOI18N
         FormInput.add(jLabel15);
-        jLabel15.setBounds(226, 160, 60, 23);
+        jLabel15.setBounds(610, 10, 60, 23);
 
         NoSurat.setHighlighter(null);
         NoSurat.setName("NoSurat"); // NOI18N
@@ -930,7 +920,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(NoSurat);
-        NoSurat.setBounds(290, 160, 85, 23);
+        NoSurat.setBounds(670, 10, 85, 23);
 
         Diagnosa.setHighlighter(null);
         Diagnosa.setName("Diagnosa"); // NOI18N
@@ -940,17 +930,17 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(Diagnosa);
-        Diagnosa.setBounds(96, 40, 279, 23);
+        Diagnosa.setBounds(100, 130, 279, 23);
 
         jLabel16.setText("Diagnosa :");
         jLabel16.setName("jLabel16"); // NOI18N
         FormInput.add(jLabel16);
-        jLabel16.setBounds(0, 40, 92, 23);
+        jLabel16.setBounds(30, 130, 60, 23);
 
         jLabel17.setText("Terapi :");
         jLabel17.setName("jLabel17"); // NOI18N
         FormInput.add(jLabel17);
-        jLabel17.setBounds(375, 40, 95, 23);
+        jLabel17.setBounds(40, 160, 50, 23);
 
         Terapi.setHighlighter(null);
         Terapi.setName("Terapi"); // NOI18N
@@ -960,7 +950,7 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(Terapi);
-        Terapi.setBounds(474, 40, 266, 23);
+        Terapi.setBounds(100, 160, 266, 23);
 
         NoReg.setHighlighter(null);
         NoReg.setName("NoReg"); // NOI18N
@@ -970,12 +960,12 @@ public class DlgSKDPBPJS extends javax.swing.JDialog {
             }
         });
         FormInput.add(NoReg);
-        NoReg.setBounds(474, 160, 70, 23);
+        NoReg.setBounds(290, 40, 70, 23);
 
         jLabel18.setText("No.Reg :");
         jLabel18.setName("jLabel18"); // NOI18N
         FormInput.add(jLabel18);
-        jLabel18.setBounds(375, 160, 95, 23);
+        jLabel18.setBounds(240, 40, 50, 23);
 
         PanelInput.add(FormInput, java.awt.BorderLayout.CENTER);
 
@@ -1240,52 +1230,6 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         // TODO add your handling code here:
     }//GEN-LAST:event_DTPCari4KeyPressed
 
-    private void BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditActionPerformed
-        if(TNoRM.getText().trim().equals("")||TPasien.getText().trim().equals("")){
-            Valid.textKosong(TNoRM,"pasien");
-        }else if(NmDokter.getText().trim().equals("")||KdDokter.getText().trim().equals("")){
-            Valid.textKosong(KdDokter,"Operator");
-        }else if(NmPoli.getText().trim().equals("")||NmPoli.getText().trim().equals("")){
-            Valid.textKosong(KdPoli,"Operasi");
-        }else if(NoSurat.getText().trim().equals("")){
-            Valid.textKosong(NoSurat,"No.Surat");
-        }else if(NoReg.getText().trim().equals("")){
-            Valid.textKosong(NoReg,"No.Antri");
-        }else if(Terapi.getText().trim().equals("")){
-            Valid.textKosong(Terapi,"Terapi");
-        }else if(Diagnosa.getText().trim().equals("")){
-            Valid.textKosong(Diagnosa,"Diagnosa");
-        }else{
-            if(tbObat.getSelectedRow()!= -1){
-                if(Sequel.mengedittf("skdp_bpjs","tahun=? and no_antrian=?","tahun=?,no_rkm_medis=?,diagnosa=?,terapi=?,alasan1=?,alasan2=?,rtl1=?,rtl2=?,tanggal_datang=?,tanggal_rujukan=?,no_antrian=?,kd_dokter=?,status=?",15,new String[]{
-                        TanggalPeriksa.getSelectedItem().toString().substring(6,10),TNoRM.getText(),Diagnosa.getText(),Terapi.getText(),
-                        Alasan1.getText(),Alasan2.getText(),Rtl1.getText(),Rtl2.getText(),Valid.SetTgl(TanggalPeriksa.getSelectedItem()+""),
-                        Valid.SetTgl(TanggalSurat.getSelectedItem()+""),NoSurat.getText(),KdDokter.getText(),Status.getSelectedItem().toString(),
-                        tbObat.getValueAt(tbObat.getSelectedRow(),0).toString(),tbObat.getValueAt(tbObat.getSelectedRow(),11).toString()
-                  })==true){
-                    Sequel.mengedit3("booking_registrasi","no_rkm_medis=? and tanggal_periksa=?","tanggal_booking=?,no_rkm_medis=?,tanggal_periksa=?,kd_dokter=?,kd_poli=?,no_reg=?",8,new String[]{
-                         Valid.SetTgl(TanggalSurat.getSelectedItem()+""),TNoRM.getText(),
-                         Valid.SetTgl(TanggalPeriksa.getSelectedItem()+""),KdDokter.getText(),
-                         KdPoli.getText(),NoReg.getText(),tbObat.getValueAt(tbObat.getSelectedRow(),1).toString(),
-                         tbObat.getValueAt(tbObat.getSelectedRow(),9).toString()
-                    });
-                    emptTeks();
-                    tampil();
-                }
-            }else{
-                JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih terlebih dulu data yang mau anda ganti...\n Klik data pada table untuk memilih data...!!!!");
-            }                
-        }
-    }//GEN-LAST:event_BtnEditActionPerformed
-
-    private void BtnEditKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnEditKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_SPACE){
-            BtnEditActionPerformed(null);
-        }else{
-            Valid.pindah(evt, BtnHapus, BtnKeluar);
-        }
-    }//GEN-LAST:event_BtnEditKeyPressed
-
     private void StatusKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_StatusKeyPressed
         Valid.pindah(evt,TanggalSurat,Diagnosa);
     }//GEN-LAST:event_StatusKeyPressed
@@ -1437,6 +1381,10 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         }
     }//GEN-LAST:event_tbObatKeyReleased
 
+    private void Rtl1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rtl1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Rtl1ActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -1460,7 +1408,6 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     private widget.Button BtnBatal;
     private widget.Button BtnCari;
     private widget.Button BtnDokter;
-    private widget.Button BtnEdit;
     private widget.Button BtnHapus;
     private widget.Button BtnKeluar;
     private widget.Button BtnPoli;
@@ -1703,7 +1650,6 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
         BtnSimpan.setEnabled(akses.getskdp_bpjs());
         BtnHapus.setEnabled(akses.getskdp_bpjs());
         BtnPrint.setEnabled(akses.getskdp_bpjs());
-        BtnEdit.setEnabled(akses.getskdp_bpjs());
     }
 
     public JTable getTable(){

@@ -441,6 +441,8 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         } catch (Exception e) {
             System.out.println(e);
         }
+        FormInput.setPreferredSize(new Dimension(864,100));
+        
     }    
     
 
@@ -487,6 +489,12 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         kdgudang = new widget.TextBox();
         nmgudang = new widget.TextBox();
         BtnGudang = new widget.Button();
+        jLabel10 = new widget.Label();
+        LblNoRawat = new widget.TextBox();
+        jLabel11 = new widget.Label();
+        LblNoRM = new widget.TextBox();
+        jLabel12 = new widget.Label();
+        LblNamaPasien = new widget.TextBox();
         TabRawat = new javax.swing.JTabbedPane();
         Scroll = new widget.ScrollPane();
         tbObat = new widget.Table();
@@ -499,7 +507,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Popup.setName("Popup"); // NOI18N
 
         ppBersihkan.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppBersihkan.setForeground(new java.awt.Color(50,50,50));
+        ppBersihkan.setForeground(new java.awt.Color(50, 50, 50));
         ppBersihkan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppBersihkan.setText("Bersihkan Jumlah");
         ppBersihkan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -514,7 +522,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Popup.add(ppBersihkan);
 
         ppStok.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppStok.setForeground(new java.awt.Color(50,50,50));
+        ppStok.setForeground(new java.awt.Color(50, 50, 50));
         ppStok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppStok.setText("Tampilkan Semua Stok");
         ppStok.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -529,7 +537,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
         Popup.add(ppStok);
 
         ppStok1.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        ppStok1.setForeground(new java.awt.Color(50,50,50));
+        ppStok1.setForeground(new java.awt.Color(50, 50, 50));
         ppStok1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
         ppStok1.setText("Tampilkan Stok Lokasi Lain");
         ppStok1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -572,7 +580,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
 
-        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50,50,50))); // NOI18N
+        internalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(240, 245, 235)), "::[ Data Obat, Alkes & BHP Medis ]::", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(50, 50, 50))); // NOI18N
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
@@ -719,17 +727,17 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
 
         FormInput.setBackground(new java.awt.Color(215, 225, 215));
         FormInput.setName("FormInput"); // NOI18N
-        FormInput.setPreferredSize(new java.awt.Dimension(100, 73));
+        FormInput.setPreferredSize(new java.awt.Dimension(864, 100));
         FormInput.setLayout(null);
 
         jLabel5.setText("Tanggal :");
         jLabel5.setName("jLabel5"); // NOI18N
         jLabel5.setPreferredSize(new java.awt.Dimension(68, 23));
         FormInput.add(jLabel5);
-        jLabel5.setBounds(4, 10, 68, 23);
+        jLabel5.setBounds(0, 40, 68, 23);
 
         DTPTgl.setForeground(new java.awt.Color(50, 70, 50));
-        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "27-04-2019" }));
+        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-05-2020" }));
         DTPTgl.setDisplayFormat("dd-MM-yyyy");
         DTPTgl.setName("DTPTgl"); // NOI18N
         DTPTgl.setOpaque(false);
@@ -740,7 +748,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(DTPTgl);
-        DTPTgl.setBounds(75, 10, 90, 23);
+        DTPTgl.setBounds(70, 40, 90, 23);
 
         cmbJam.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
         cmbJam.setName("cmbJam"); // NOI18N
@@ -751,7 +759,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(cmbJam);
-        cmbJam.setBounds(169, 10, 62, 23);
+        cmbJam.setBounds(170, 40, 62, 23);
 
         cmbMnt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
         cmbMnt.setName("cmbMnt"); // NOI18N
@@ -762,7 +770,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(cmbMnt);
-        cmbMnt.setBounds(234, 10, 62, 23);
+        cmbMnt.setBounds(242, 40, 50, 23);
 
         cmbDtk.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59" }));
         cmbDtk.setName("cmbDtk"); // NOI18N
@@ -773,9 +781,10 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(cmbDtk);
-        cmbDtk.setBounds(299, 10, 62, 23);
+        cmbDtk.setBounds(300, 40, 62, 23);
 
         ChkJln.setBorder(null);
+        ChkJln.setSelected(true);
         ChkJln.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         ChkJln.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ChkJln.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -787,13 +796,13 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(ChkJln);
-        ChkJln.setBounds(364, 10, 22, 23);
+        ChkJln.setBounds(370, 40, 22, 23);
 
         label12.setText("Tarif :");
         label12.setName("label12"); // NOI18N
         label12.setPreferredSize(new java.awt.Dimension(50, 23));
         FormInput.add(label12);
-        label12.setBounds(382, 10, 50, 23);
+        label12.setBounds(380, 40, 50, 23);
 
         Jeniskelas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Kelas 1", "Kelas 2", "Kelas 3", "Utama/BPJS", "VIP", "VVIP", "Beli Luar", "Karyawan" }));
         Jeniskelas.setName("Jeniskelas"); // NOI18N
@@ -809,7 +818,7 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(Jeniskelas);
-        Jeniskelas.setBounds(435, 10, 110, 23);
+        Jeniskelas.setBounds(430, 40, 110, 23);
 
         ChkNoResep.setSelected(true);
         ChkNoResep.setText("No.Resep   ");
@@ -824,13 +833,13 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(ChkNoResep);
-        ChkNoResep.setBounds(548, 10, 100, 23);
+        ChkNoResep.setBounds(550, 40, 100, 23);
 
         label21.setText("Depo :");
         label21.setName("label21"); // NOI18N
         label21.setPreferredSize(new java.awt.Dimension(70, 23));
         FormInput.add(label21);
-        label21.setBounds(4, 40, 68, 23);
+        label21.setBounds(0, 70, 68, 23);
 
         kdgudang.setEditable(false);
         kdgudang.setName("kdgudang"); // NOI18N
@@ -841,13 +850,13 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(kdgudang);
-        kdgudang.setBounds(75, 40, 55, 23);
+        kdgudang.setBounds(70, 70, 55, 23);
 
         nmgudang.setEditable(false);
         nmgudang.setName("nmgudang"); // NOI18N
         nmgudang.setPreferredSize(new java.awt.Dimension(207, 23));
         FormInput.add(nmgudang);
-        nmgudang.setBounds(132, 40, 197, 23);
+        nmgudang.setBounds(130, 70, 197, 23);
 
         BtnGudang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
         BtnGudang.setMnemonic('2');
@@ -860,14 +869,54 @@ public final class DlgCariObat2 extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnGudang);
-        BtnGudang.setBounds(332, 40, 28, 23);
+        BtnGudang.setBounds(330, 70, 28, 23);
+
+        jLabel10.setText("No.Rawat :");
+        jLabel10.setName("jLabel10"); // NOI18N
+        jLabel10.setPreferredSize(new java.awt.Dimension(68, 23));
+        FormInput.add(jLabel10);
+        jLabel10.setBounds(4, 10, 65, 23);
+
+        LblNoRawat.setEditable(false);
+        LblNoRawat.setName("LblNoRawat"); // NOI18N
+        LblNoRawat.setPreferredSize(new java.awt.Dimension(207, 23));
+        FormInput.add(LblNoRawat);
+        LblNoRawat.setBounds(72, 10, 123, 23);
+
+        jLabel11.setText("No.RM :");
+        jLabel11.setName("jLabel11"); // NOI18N
+        jLabel11.setPreferredSize(new java.awt.Dimension(68, 23));
+        FormInput.add(jLabel11);
+        jLabel11.setBounds(188, 10, 65, 23);
+
+        LblNoRM.setEditable(false);
+        LblNoRM.setName("LblNoRM"); // NOI18N
+        LblNoRM.setPreferredSize(new java.awt.Dimension(207, 23));
+        LblNoRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LblNoRMActionPerformed(evt);
+            }
+        });
+        FormInput.add(LblNoRM);
+        LblNoRM.setBounds(256, 10, 90, 23);
+
+        jLabel12.setText("Nama Pasien :");
+        jLabel12.setName("jLabel12"); // NOI18N
+        jLabel12.setPreferredSize(new java.awt.Dimension(68, 23));
+        FormInput.add(jLabel12);
+        jLabel12.setBounds(365, 10, 80, 23);
+
+        LblNamaPasien.setEditable(false);
+        LblNamaPasien.setName("LblNamaPasien"); // NOI18N
+        LblNamaPasien.setPreferredSize(new java.awt.Dimension(207, 23));
+        FormInput.add(LblNamaPasien);
+        LblNamaPasien.setBounds(448, 10, 237, 23);
 
         internalFrame1.add(FormInput, java.awt.BorderLayout.PAGE_START);
 
         TabRawat.setBackground(new java.awt.Color(255, 255, 253));
         TabRawat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(241, 246, 236)));
-        TabRawat.setForeground(new java.awt.Color(50,50,50));
-        TabRawat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        TabRawat.setForeground(new java.awt.Color(50, 50, 50));
         TabRawat.setName("TabRawat"); // NOI18N
         TabRawat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1838,6 +1887,10 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
         this.setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_ppStok1ActionPerformed
 
+    private void LblNoRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LblNoRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LblNoRMActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -1870,6 +1923,9 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
     private widget.PanelBiasa FormInput;
     private widget.ComboBox Jeniskelas;
     private widget.TextBox KdPj;
+    private widget.TextBox LblNamaPasien;
+    private widget.TextBox LblNoRM;
+    private widget.TextBox LblNoRawat;
     private javax.swing.JPopupMenu Popup;
     private widget.ScrollPane Scroll;
     private widget.ScrollPane Scroll2;
@@ -1881,6 +1937,9 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
     private widget.ComboBox cmbJam;
     private widget.ComboBox cmbMnt;
     private widget.InternalFrame internalFrame1;
+    private widget.Label jLabel10;
+    private widget.Label jLabel11;
+    private widget.Label jLabel12;
     private widget.Label jLabel5;
     private javax.swing.JPanel jPanel3;
     private widget.TextBox kdgudang;
@@ -2646,9 +2705,14 @@ private void ChkJlnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:
         TCari.requestFocus();
     } 
     
-    public void setNoRm(String norwt,Date tanggal) {       
+    
+    
+    public void setNoRm(String norwt,Date tanggal,String norm,String nama) {       
         aktifpcare="no";
         TNoRw.setText(norwt);
+        LblNoRawat.setText(norwt);
+        LblNoRM.setText(norm);
+        LblNamaPasien.setText(nama);
         DTPTgl.setDate(tanggal);
         ChkJln.setSelected(true);
         KdPj.setText(Sequel.cariIsi("select kd_pj from reg_periksa where no_rawat=?",norwt));

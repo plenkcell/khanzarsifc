@@ -1529,9 +1529,8 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     if ((Sequel.cariInteger("select count(noorder) from permintaan_pemeriksaan_lab where stts_bayar='Sudah' and noorder=?", NoPermintaan)
                             + Sequel.cariInteger("select count(noorder) from permintaan_detail_permintaan_lab where stts_bayar='Sudah' and noorder=?", NoPermintaan)) > 0) {
                         JOptionPane.showMessageDialog(null, "Maaf, Tidak boleh dihapus karena sudah ada tindakan yang sudah dibayar.\nSilahkan hubungi kasir...!!!!");
-                    } else {
-
-                        int input = JOptionPane.showConfirmDialog(null, "Apakah anda yakin mau menghapus Permintaan Lab ini??", "Hapus Dialog", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
+                    } else {                        
+                        int input = JOptionPane.showConfirmDialog(null, "Apakah anda yakin mau menghapus data ini??", "Hapus Dialog", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
                         if (input == 0) {
                             Sequel.meghapus("permintaan_lab", "noorder", NoPermintaan);
                             TeksKosong();
