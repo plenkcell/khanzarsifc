@@ -20,4 +20,6 @@ public final class ComboBox extends JComboBox {
         setForeground(new Color(50,50,50));
         setSize(WIDTH,23);
     } 
+
+    
 }

@@ -1021,7 +1021,9 @@ public class DlgPemberianObat extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(rootPane,"Matikan dulu jam otomatis sebelum menghapus data..!!");
             ChkJln.requestFocus();
         }else if(!(TPasien.getText().trim().equals(""))){
-            try{   
+            try{
+                int input = JOptionPane.showConfirmDialog(null, "Apakah anda yakin mau menghapus data obat Ini??", "Hapus Dialog", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
+                    if (input == 0) {
                 if(tbPemberianObat.getSelectedRow()!= -1){
                     jmlparsial=0;
                     if(aktifkanparsial.equals("yes")){
@@ -1050,12 +1052,14 @@ public class DlgPemberianObat extends javax.swing.JDialog {
                     if(sukses==true){
                         tampilPO();
                     }
-                }                    
+                }   
+                    }
             }catch(Exception e){
                 System.out.println("Notifikasi : "+e);
                 JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
             }
         }
+        
 }//GEN-LAST:event_BtnHapusActionPerformed
 
     private void BtnHapusKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnHapusKeyPressed
