@@ -287,8 +287,8 @@ public class DetailPemberianObat {
         this.satuan = satuan;
     }
     
-     public double getHargaJual(){
-        return (getJml() * getBiayaObat()) + getTuslah() + getEmbalase();
+    public double getHargaJual(){
+        return (getJml() * getBiayaObat()) +getTuslah() + getEmbalase();
     }
     
     

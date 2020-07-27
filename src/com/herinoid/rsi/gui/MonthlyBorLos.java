@@ -355,7 +355,7 @@ private void btnCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_b
 
     private void cboPeriodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboPeriodeActionPerformed
         // TODO add your handling code here:
-         if (cboPeriode.getSelectedIndex() == 5) {
+        if (cboPeriode.getSelectedIndex() == 5) {
             cmbTahun.setVisible(true);
             Tgl1.setVisible(false);
             Tgl2.setVisible(false);

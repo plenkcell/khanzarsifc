@@ -4214,7 +4214,15 @@ public final class BPJSDataSEP extends javax.swing.JDialog {
         isRawat();            
     }
     
+    public void setNoKartu(String nokartu,String norwt) {
+        NoKartu.setText(nokartu);
+        TNoRw.setText(norwt);
+        isRawat();            
+    }
     
+    public JTable getTable(){
+        return tbObat;
+    }
     
     public void isCek(){
         BtnSimpan.setEnabled(akses.getbpjs_sep());

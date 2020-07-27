@@ -87,7 +87,8 @@ public class DlgPasien extends javax.swing.JDialog {
             p_alamatpj=0,p_kelurahanpj=0,p_kecamatanpj=0,p_kabupatenpj=0,
             p_propinsi=0,p_propinsipj=0;
     private double x=0,i=0;
-    private String kdkel="",kdkec="",kdkab="",kdprop="",klg="SAUDARA",say="",pengurutan="",asalform="",bulan="",tahun="",awalantahun="",awalanbulan="",posisitahun="",
+    private String kdkel="",kdkec="",kdkab="",kdprop="",klg="SAUDARA",say="",pengurutan="",
+            asalform="",bulan="",tahun="",awalantahun="",awalanbulan="",posisitahun="",
             no_ktp="",tmp_lahir="",nm_ibu="",alamat="",pekerjaan="",no_tlp="",
             umur="",namakeluarga="",no_peserta="",kelurahan="",kecamatan="",
             kabupaten="",pekerjaanpj="",alamatpj="",kelurahanpj="",kecamatanpj="",

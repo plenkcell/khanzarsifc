@@ -424,7 +424,6 @@ public class DlgPemberianObat extends javax.swing.JDialog {
         DTPBeri = new widget.Tanggal();
         jLabel13 = new widget.Label();
         TKdOb = new widget.TextBox();
-        btnObat1 = new widget.Button();
         TNmOb = new widget.TextBox();
         jLabel11 = new widget.Label();
         cmbJam = new widget.ComboBox();
@@ -436,6 +435,7 @@ public class DlgPemberianObat extends javax.swing.JDialog {
         ChkJln = new widget.CekBox();
         BtnObat2 = new widget.Button();
         BtnObat3 = new widget.Button();
+        btnObat1 = new widget.Button();
         ChkInput = new widget.CekBox();
 
         Popup2.setName("Popup2"); // NOI18N
@@ -494,7 +494,7 @@ public class DlgPemberianObat extends javax.swing.JDialog {
 
         Tanggal.setEditable(false);
         Tanggal.setForeground(new java.awt.Color(50, 70, 50));
-        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-05-2020" }));
+        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-06-2020" }));
         Tanggal.setDisplayFormat("dd-MM-yyyy");
         Tanggal.setName("Tanggal"); // NOI18N
         Tanggal.setOpaque(false);
@@ -652,7 +652,7 @@ public class DlgPemberianObat extends javax.swing.JDialog {
         panelGlass9.add(jLabel14);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-05-2020" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-06-2020" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -665,7 +665,7 @@ public class DlgPemberianObat extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-05-2020" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-06-2020" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -789,7 +789,7 @@ public class DlgPemberianObat extends javax.swing.JDialog {
         jLabel7.setBounds(-2, 42, 80, 23);
 
         DTPBeri.setForeground(new java.awt.Color(50, 70, 50));
-        DTPBeri.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "18-05-2020" }));
+        DTPBeri.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-06-2020" }));
         DTPBeri.setDisplayFormat("dd-MM-yyyy");
         DTPBeri.setName("DTPBeri"); // NOI18N
         DTPBeri.setOpaque(false);
@@ -815,18 +815,6 @@ public class DlgPemberianObat extends javax.swing.JDialog {
         });
         FormInput.add(TKdOb);
         TKdOb.setBounds(81, 72, 90, 23);
-
-        btnObat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        btnObat1.setMnemonic('4');
-        btnObat1.setToolTipText("Alt+4");
-        btnObat1.setName("btnObat1"); // NOI18N
-        btnObat1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnObat1ActionPerformed(evt);
-            }
-        });
-        FormInput.add(btnObat1);
-        btnObat1.setBounds(545, 72, 28, 23);
 
         TNmOb.setEditable(false);
         TNmOb.setName("TNmOb"); // NOI18N
@@ -916,6 +904,18 @@ public class DlgPemberianObat extends javax.swing.JDialog {
         });
         FormInput.add(BtnObat3);
         BtnObat3.setBounds(604, 72, 28, 23);
+
+        btnObat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
+        btnObat1.setMnemonic('4');
+        btnObat1.setToolTipText("Alt+4");
+        btnObat1.setName("btnObat1"); // NOI18N
+        btnObat1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnObat1ActionPerformed(evt);
+            }
+        });
+        FormInput.add(btnObat1);
+        btnObat1.setBounds(1830, 10, 35, 25);
 
         PanelInput.add(FormInput, java.awt.BorderLayout.CENTER);
 
@@ -1021,9 +1021,9 @@ public class DlgPemberianObat extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(rootPane,"Matikan dulu jam otomatis sebelum menghapus data..!!");
             ChkJln.requestFocus();
         }else if(!(TPasien.getText().trim().equals(""))){
-            try{
-                int input = JOptionPane.showConfirmDialog(null, "Apakah anda yakin mau menghapus data obat Ini??", "Hapus Dialog", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
-                    if (input == 0) {
+            try{                
+                    int input = JOptionPane.showConfirmDialog(null, "Apakah anda yakin mau menghapus pemberian Obat ini??", "Hapus Dialog", JOptionPane.OK_CANCEL_OPTION, JOptionPane.ERROR_MESSAGE);
+                    if (input == 0) {   
                 if(tbPemberianObat.getSelectedRow()!= -1){
                     jmlparsial=0;
                     if(aktifkanparsial.equals("yes")){
@@ -1052,14 +1052,13 @@ public class DlgPemberianObat extends javax.swing.JDialog {
                     if(sukses==true){
                         tampilPO();
                     }
-                }   
-                    }
+                }  
+            }                    
             }catch(Exception e){
                 System.out.println("Notifikasi : "+e);
                 JOptionPane.showMessageDialog(null,"Maaf, Silahkan anda pilih terlebih dulu data yang mau anda hapus...\n Klik data pada table untuk memilih data...!!!!");
             }
         }
-        
 }//GEN-LAST:event_BtnHapusActionPerformed
 
     private void BtnHapusKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BtnHapusKeyPressed
@@ -1558,7 +1557,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             if(Sequel.cariInteger("select count(no_rawat) from stok_obat_pasien where no_rawat=? ",norwt)>0){
                 btnObat1.setEnabled(false);
             }else{
-                btnObat1.setEnabled(false);
+                btnObat1.setEnabled(true);
             }
         }else if(statuspasien.equals("ralan")){
             btnObat1.setEnabled(true);
@@ -1581,7 +1580,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             if(Sequel.cariInteger("select count(no_rawat) from stok_obat_pasien where no_rawat=? ",norwt)>0){
                 btnObat1.setEnabled(false);
             }else{
-                btnObat1.setEnabled(false);
+                btnObat1.setEnabled(true);
             }
         }else if(statuspasien.equals("ralan")){
             btnObat1.setEnabled(true);

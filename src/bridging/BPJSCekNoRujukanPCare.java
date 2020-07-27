@@ -14,6 +14,7 @@ package bridging;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.herinoid.rsi.util.Utils;
 import fungsi.WarnaTable;
 import fungsi.batasInput;
 import fungsi.koneksiDB;
@@ -6142,17 +6143,17 @@ public final class BPJSCekNoRujukanPCare extends javax.swing.JDialog {
                 })==true){
                     UpdateUmur();
                     Sequel.menyimpan2("rujuk_masuk","'"+TNoRw.getText()+"','"+NmPpkRujukan.getText()+"','"+Kabupaten.getText()+"','"+NoRujukan.getText()+"','0','"+NmPPK.getText()+"','"+KdPenyakit.getText()+"','-','-','"+NoBalasan.getText()+"'","No.Rujuk");             
-                    Sequel.menyimpan2("penyakit","?,?,?,?,?,?","Penyakit",6,new String[]{KdPenyakit.getText(),NmPenyakit.getText(),NmPenyakit.getText(),"-","-","Tidak Menular"});
-                    if(Sequel.cariInteger(
-                            "select count(diagnosa_pasien.kd_penyakit) from diagnosa_pasien "+
-                            "inner join reg_periksa inner join pasien on "+
-                            "diagnosa_pasien.no_rawat=reg_periksa.no_rawat and "+
-                            "reg_periksa.no_rkm_medis=pasien.no_rkm_medis where "+
-                            "pasien.no_rkm_medis='"+TNo.getText()+"' and diagnosa_pasien.kd_penyakit='"+KdPenyakit.getText()+"'")>0){
-                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Lama"});
-                    }else{
-                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Baru"});
-                    }
+//                    Sequel.menyimpan2("penyakit","?,?,?,?,?,?","Penyakit",6,new String[]{KdPenyakit.getText(),NmPenyakit.getText(),NmPenyakit.getText(),"-","-","Tidak Menular"});
+//                    if(Sequel.cariInteger(
+//                            "select count(diagnosa_pasien.kd_penyakit) from diagnosa_pasien "+
+//                            "inner join reg_periksa inner join pasien on "+
+//                            "diagnosa_pasien.no_rawat=reg_periksa.no_rawat and "+
+//                            "reg_periksa.no_rkm_medis=pasien.no_rkm_medis where "+
+//                            "pasien.no_rkm_medis='"+TNo.getText()+"' and diagnosa_pasien.kd_penyakit='"+KdPenyakit.getText()+"'")>0){
+//                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Lama"});
+//                    }else{
+//                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Baru"});
+//                    }
                     insertSEP();
             }
         }else if(JenisPelayanan.getSelectedIndex()==0){
@@ -6165,17 +6166,17 @@ public final class BPJSCekNoRujukanPCare extends javax.swing.JDialog {
                 })==true){
                     UpdateUmur();
                     Sequel.menyimpan2("rujuk_masuk","'"+TNoRw.getText()+"','"+NmPpkRujukan.getText()+"','"+Kabupaten.getText()+"','"+NoRujukan.getText()+"','0','"+NmPPK.getText()+"','"+KdPenyakit.getText()+"','-','-','"+NoBalasan.getText()+"'","No.Rujuk");                                     
-                    Sequel.menyimpan2("penyakit","?,?,?,?,?,?","Penyakit",6,new String[]{KdPenyakit.getText(),NmPenyakit.getText(),NmPenyakit.getText(),"-","-","Tidak Menular"});
-                    if(Sequel.cariInteger(
-                            "select count(diagnosa_pasien.kd_penyakit) from diagnosa_pasien "+
-                            "inner join reg_periksa inner join pasien on "+
-                            "diagnosa_pasien.no_rawat=reg_periksa.no_rawat and "+
-                            "reg_periksa.no_rkm_medis=pasien.no_rkm_medis where "+
-                            "pasien.no_rkm_medis='"+TNo.getText()+"' and diagnosa_pasien.kd_penyakit='"+KdPenyakit.getText()+"'")>0){
-                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Lama"});
-                    }else{
-                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Baru"});
-                    }
+//                    Sequel.menyimpan2("penyakit","?,?,?,?,?,?","Penyakit",6,new String[]{KdPenyakit.getText(),NmPenyakit.getText(),NmPenyakit.getText(),"-","-","Tidak Menular"});
+//                    if(Sequel.cariInteger(
+//                            "select count(diagnosa_pasien.kd_penyakit) from diagnosa_pasien "+
+//                            "inner join reg_periksa inner join pasien on "+
+//                            "diagnosa_pasien.no_rawat=reg_periksa.no_rawat and "+
+//                            "reg_periksa.no_rkm_medis=pasien.no_rkm_medis where "+
+//                            "pasien.no_rkm_medis='"+TNo.getText()+"' and diagnosa_pasien.kd_penyakit='"+KdPenyakit.getText()+"'")>0){
+//                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Lama"});
+//                    }else{
+//                        Sequel.menyimpan2("diagnosa_pasien","?,?,?,?,?","Penyakit",5,new String[]{TNoRw.getText(),KdPenyakit.getText(),"Ralan","1","Baru"});
+//                    }
                     
                     jmlhari=0;
                     biaya=0;
@@ -6351,7 +6352,7 @@ public final class BPJSCekNoRujukanPCare extends javax.swing.JDialog {
                 }                     
             }else{
                 Sequel.meghapus3("kamar_inap","no_rawat",TNoRw.getText());
-                Sequel.meghapus3("diagnosa_pasien","no_rawat",TNoRw.getText());
+//                Sequel.meghapus3("diagnosa_pasien","no_rawat",TNoRw.getText());
                 Sequel.meghapus3("rujuk_masuk","no_rawat",TNoRw.getText());
                 Sequel.meghapus3("reg_periksa","no_rawat",TNoRw.getText());
                 if(statuspasien.equals("Baru")){
@@ -6361,7 +6362,7 @@ public final class BPJSCekNoRujukanPCare extends javax.swing.JDialog {
             }
         }catch (Exception ex) {
             Sequel.meghapus3("kamar_inap","no_rawat",TNoRw.getText());
-            Sequel.meghapus3("diagnosa_pasien","no_rawat",TNoRw.getText());
+//            Sequel.meghapus3("diagnosa_pasien","no_rawat",TNoRw.getText());
             Sequel.meghapus3("rujuk_masuk","no_rawat",TNoRw.getText());
             Sequel.meghapus3("reg_periksa","no_rawat",TNoRw.getText());
             if(statuspasien.equals("Baru")){

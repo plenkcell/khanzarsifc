@@ -47,6 +47,8 @@ public class DlgBookingRegistrasi extends javax.swing.JDialog {
     private DlgCariPoli poli=new DlgCariPoli(null,false);
     private DlgCariPoli2 poli2=new DlgCariPoli2(null,false);
     private DlgPasien pasien=new DlgPasien(null,false);
+    private int pilih=0,p_URUTNOREG=0;
+//    private double x=0,i=0;
     private String aktifjadwal="",URUTNOREG="",status="",no_rawat="",umur="",sttsumur="";
     
     
@@ -290,6 +292,8 @@ public class DlgBookingRegistrasi extends javax.swing.JDialog {
             @Override
             public void windowDeactivated(WindowEvent e) {}
         }); 
+        
+        
         
         pasien.addWindowListener(new WindowListener() {
             @Override
@@ -1775,5 +1779,13 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             emptTeks();
             tampil();
         } 
+    }
+
+    public JTable getTable2(){
+        return tbObat;
+    }
+    
+    public Object getTable() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

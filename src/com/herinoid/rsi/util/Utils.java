@@ -1,4 +1,5 @@
-/*
+
+	/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -22,6 +23,7 @@ public class Utils {
     public final static String DATE_FORMAT2 = "dd-MM-yyyy";
     public final static String DATE_FORMAT_DB = "yyyy-MM-dd";
     public final static String TIMESTAMP_FORMAT = "dd/MM/yyyy HH:mm:ss";
+    public static String[] hariName = {"Ahad","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu"};
 
     public static java.sql.Date convertUtilToSql(java.util.Date uDate) {
         java.sql.Date sDate = new java.sql.Date(uDate.getTime());
@@ -38,6 +40,14 @@ public class Utils {
         }
         NumberFormat formater = new DecimalFormat(format);
         return formater.format(amount);
+    }
+    
+    public static String formatTanggal(java.sql.Date sqlDate){
+        java.util.Date utilDate = new java.util.Date(sqlDate.getTime());
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(utilDate);
+        int day = cal.get(Calendar.DAY_OF_WEEK);
+        return hariName[day-1]+", "+ convertDate(utilDate, DATE_FORMAT2);
     }
 
     public static String convertDate(Date date, String style) {
@@ -101,6 +111,10 @@ public class Utils {
             e.printStackTrace();
             return null;
         }
+    }
+    
+     public static boolean isBlank(String str) {
+        return str == null || str.trim().length() == 0;
     }
 
 }

@@ -435,11 +435,11 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
 
         panelisi3.setName("panelisi3"); // NOI18N
         panelisi3.setPreferredSize(new java.awt.Dimension(100, 43));
-        panelisi3.setWarnaAtas(new java.awt.Color(255, 0, 204));
-        panelisi3.setWarnaBawah(new java.awt.Color(153, 0, 153));
+        panelisi3.setWarnaAtas(new java.awt.Color(255, 204, 255));
+        panelisi3.setWarnaBawah(new java.awt.Color(255, 204, 255));
         panelisi3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 4, 9));
 
-        label9.setForeground(new java.awt.Color(255, 255, 255));
+        label9.setForeground(new java.awt.Color(0, 0, 0));
         label9.setText("Key Word :");
         label9.setName("label9"); // NOI18N
         label9.setPreferredSize(new java.awt.Dimension(68, 23));
@@ -578,14 +578,14 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
 
         internalFrame1.add(panelisi3, java.awt.BorderLayout.PAGE_END);
 
-        FormInput.setBackground(new java.awt.Color(204, 0, 204));
+        FormInput.setBackground(new java.awt.Color(255, 204, 255));
         FormInput.setName("FormInput"); // NOI18N
         FormInput.setPreferredSize(new java.awt.Dimension(864, 108));
-        FormInput.setWarnaAtas(new java.awt.Color(255, 0, 204));
-        FormInput.setWarnaBawah(new java.awt.Color(153, 0, 153));
+        FormInput.setWarnaAtas(new java.awt.Color(255, 204, 255));
+        FormInput.setWarnaBawah(new java.awt.Color(255, 204, 255));
         FormInput.setLayout(null);
 
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Tanggal :");
         jLabel5.setName("jLabel5"); // NOI18N
         jLabel5.setPreferredSize(new java.awt.Dimension(68, 23));
@@ -593,7 +593,7 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
         jLabel5.setBounds(10, 40, 68, 23);
 
         DTPTgl.setForeground(new java.awt.Color(50, 70, 50));
-        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "22-05-2020" }));
+        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "28-05-2020" }));
         DTPTgl.setDisplayFormat("dd-MM-yyyy");
         DTPTgl.setName("DTPTgl"); // NOI18N
         DTPTgl.setOpaque(false);
@@ -654,7 +654,7 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
         FormInput.add(ChkJln);
         ChkJln.setBounds(390, 40, 30, 23);
 
-        label12.setForeground(new java.awt.Color(255, 255, 255));
+        label12.setForeground(new java.awt.Color(0, 0, 0));
         label12.setText("Tarif :");
         label12.setName("label12"); // NOI18N
         label12.setPreferredSize(new java.awt.Dimension(50, 23));
@@ -677,7 +677,7 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
         FormInput.add(Jeniskelas);
         Jeniskelas.setBounds(460, 40, 110, 23);
 
-        ChkNoResep.setForeground(new java.awt.Color(255, 255, 255));
+        ChkNoResep.setForeground(new java.awt.Color(0, 0, 0));
         ChkNoResep.setSelected(true);
         ChkNoResep.setText("No.Resep   ");
         ChkNoResep.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -693,7 +693,7 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
         FormInput.add(ChkNoResep);
         ChkNoResep.setBounds(580, 40, 100, 23);
 
-        label21.setForeground(new java.awt.Color(255, 255, 255));
+        label21.setForeground(new java.awt.Color(0, 0, 0));
         label21.setText("Depol :");
         label21.setName("label21"); // NOI18N
         label21.setPreferredSize(new java.awt.Dimension(70, 23));
@@ -732,7 +732,7 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
         FormInput.add(BtnGudang);
         BtnGudang.setBounds(340, 70, 28, 23);
 
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("No.Rawat :");
         jLabel10.setName("jLabel10"); // NOI18N
         jLabel10.setPreferredSize(new java.awt.Dimension(68, 23));
@@ -746,7 +746,7 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
         FormInput.add(LblNoRawat);
         LblNoRawat.setBounds(80, 10, 123, 23);
 
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("No.RM :");
         jLabel11.setName("jLabel11"); // NOI18N
         jLabel11.setPreferredSize(new java.awt.Dimension(68, 23));
@@ -760,7 +760,7 @@ public final class DlgCariObatNonFornas extends javax.swing.JDialog {
         FormInput.add(LblNoRM);
         LblNoRM.setBounds(260, 10, 90, 23);
 
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Nama Pasien :");
         jLabel12.setName("jLabel12"); // NOI18N
         jLabel12.setPreferredSize(new java.awt.Dimension(68, 23));

@@ -111,7 +111,7 @@ public class TabelObatPilihan extends AbstractTableModel {
             return row.get(rowIndex).getNoBatch();
         }else if (columnIndex == 8) {
             return row.get(rowIndex).getNoFaktur();
-        }  else if (columnIndex == 9) {
+        } else if (columnIndex == 9) {
             return row.get(rowIndex).getAturanPakai();
         } 
         return null;
